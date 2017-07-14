@@ -1,0 +1,36 @@
+{% extends 'fragments/user_base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2 panel-form">
+	<div class="col-md-9 col-xs-9 col-md-offset-1 col-xs-offset-1">
+	<div class = "row">
+	<h3 class = "text-center">Service Number:</h3>
+		<form method = "POST" action = "unbar" class="form-inline">
+			{% csrf_token %}
+			<div class="form-group">
+				<input type="text" name="servicenum" class="form-control" id="username" placeholder="639*********">
+			</div>
+			<button type="submit"type="submit" class="btn btn-primary">Submit</button>
+		</form>
+		</div>
+		<div class = "row">
+	<div class = "table-responsive">
+		<table class="table table-bordered table-condensed">
+		<tr><td>Service Number</td> <td>{{status.0}}</td></tr>
+		<tr><td>Billing Profile</td> <td>{{status.1}}</td></tr>
+		<tr><td>MVNE</td> <td>{{status.5}}</td></tr>
+		<tr><td>BRM</td> <td>{{status.2}}</td></tr>
+		<tr><td>Siebel</td> <td>{{status.6}}</td></tr>
+		<tr><td>Asset Status</td> <td>{{status.7}}</td></tr>
+		<tr><td>Credit Limit</td> <td>{{status.3}}</td></tr>
+		<tr><td>Total Dues</td> <td>{{status.4}}</td></tr>
+		<tr><td>Last SO</td> <td>{{status.8}} - {{status.10}} - {{status.11}} - {{status.9}} </td></tr>
+		<tr><td>Remarks</td> <td>{{status.12}}</td></tr>
+		</table>
+	</div>
+</div>
+	</div>
+</div>
+</div>
+{% endblock %}

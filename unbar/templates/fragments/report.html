@@ -1,0 +1,13 @@
+{% extends 'fragments/user_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2 panel panel-default">
+			<h2 class = "text-center">Available Reports: </h2>
+			{% for report in reports%}
+				<h3>{{ report.report }} <button type="submit" class="btn btn-primary">Download</button>
+</h3>
+			{% endfor %}
+</div>
+{% endblock %}

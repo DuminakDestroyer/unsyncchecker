@@ -1,0 +1,17 @@
+{% extends 'fragments/user_base.html' %}
+{% load static %}
+
+{% block content %}
+<a href = "unbar">
+	<div class="col-md-3 col-xs-3 col-md-offset-2 col-xs-offset-2 panel panel-default">
+		<img src="{% static 'img/unbar.png'%}" class = "img img-responsive menu-img">
+		<h3 class="name text-center">Unbarring</h3>
+	</div>
+</a>
+<a href = "report">
+	<div class="col-md-3 col-xs-3 col-md-offset-2 col-xs-offset-2 panel panel-default">
+		<img src="{% static 'img/report.png'%}" class = "img img-responsive menu-img">
+		<h3 class="name text-center">Reports</h3>
+	</div>
+</a>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<head>
+	<title>Dom's Awesome Super Duper Web Utility Tool</title>
+	<link rel="stylesheet" href ="{% static 'css/main.css'%}">
+	<link rel="stylesheet" href ="{% static 'css/bootstrap.css'%}">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2 ">
+	</div>
+	{% block content %}
+	{% endblock %}
+
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src = "{% static 'js/bootstrap.js'%}"></script>
+
+</body>
